@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Recipe Generator - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for Icons -->
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    /* Navbar styling */
+    .custom-navbar {
+      background-color: #ff7043;
+    }
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffe0b2 !important;
+    }
+
+    /* Hero Section */
+    .hero-image {
+      background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80")
+        no-repeat center center/cover;
+      height: 60vh;
+      position: relative;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .search-bar {
+      position: relative;
+      width: 80%;
+      max-width: 500px;
+    }
+    .search-bar input {
+      padding-right: 35px;
+    }
+    #search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* Recipe List */
+    .recipe-list {
+      padding: 50px 0;
+      background-color: #fff8f5;
+    }
+    .recipe-list h2 {
+      color: #ff7043;
+      margin-bottom: 30px;
+    }
+
+    /* Recipe Cards */
+    .recipe-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .recipe-card:hover {
+      transform: scale(1.03);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-card-body {
+      padding: 15px;
+    }
+
+    /* Top Chefs Section */
+    .top-chefs {
+      padding: 50px 0;
+    }
+    .top-chefs h2 {
+      color: #ff7043;
+      margin-bottom: 30px;
+    }
+    .chef-card {
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .chef-card:hover {
+      transform: scale(1.05);
+    }
+    .chef-card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ff7043;
+      color: white;
+      padding: 30px 0;
+    }
+    footer h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    footer .contact-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="home-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand" href="/">RecipeGen</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span style="color: white;">☰</span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home.html#recipes">Recipes List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image">
+      <div class="overlay">
+        <div class="search-bar">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search recipes..."
+            id="search-input"
+          />
+          <span id="search-icon">&#x1F50D;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipes List -->
+    <section id="recipes" class="recipe-list">
+      <div class="container">
+        <h2 class="text-center">Recipes</h2>
+        <div class="row" id="recipe-container">
+          <!-- Recipe cards dynamically added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipe Modal -->
+    <div
+      class="modal fade"
+      id="recipeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="recipeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel">Recipe Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="modal-recipe-image"
+              src=""
+              alt="Recipe Image"
+              class="img-fluid mb-3"
+            />
+            <h5 id="modal-recipe-name"></h5>
+            <p>
+              <strong>Preparation Time:</strong>
+              <span id="modal-prep-time"></span>
+            </p>
+            <h6>Ingredients:</h6>
+            <ul id="modal-ingredients-list"></ul>
+            <h6>Preparation Steps:</h6>
+            <p id="modal-preparation-steps"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Chefs Section -->
+    <section id="chefs" class="top-chefs">
+      <div class="container">
+        <h2 class="text-center">Top Chefs</h2>
+        <div class="row" id="chefs-container">
+          <!-- Chef profiles dynamically added -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container text-center">
+        <h5>Contact Us</h5>
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> Email: info@example.com</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Address: 123 Food Lane,
+            Cooktown
+          </p>
+        </div>
+        <p class="mt-3">
+          &copy; 2025 Food Recipe Generator. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap and JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

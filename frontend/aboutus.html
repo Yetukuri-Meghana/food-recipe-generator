@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Food Recipe Generator</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome (for icons) -->
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    /* Ensure navbar looks good */
+    .custom-navbar {
+      background-color: #ff7043;
+    }
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffe0b2 !important;
+    }
+
+    /* About section styling */
+    .about-us-section {
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+
+    .about-heading {
+      color: #ff7043;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .content-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+    }
+    footer h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    footer .contact-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <a class="navbar-brand" href="index.html">RecipeGen</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" style="color: white;">☰</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/home.html#recipes">Recipes List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/aboutus.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Us Section -->
+  <section class="about-us-section container text-center">
+    <div class="content-box p-4">
+      <h2 class="about-heading">About Us</h2>
+      <p class="text-justify">
+        Welcome to the <strong>Food Recipe Generator</strong> website!  
+        At <strong>RecipeGen</strong>, we believe that cooking is more than just a daily necessity — it’s a way to connect, create, and experience the rich diversity of cultures through food.
+      </p>
+      <p class="text-justify">
+        Whether you're a beginner or a seasoned chef, our mission is simple:
+        <strong>to make quality recipes accessible to everyone.</strong> Explore thousands of curated dishes, from easy weeknight meals to gourmet creations.
+      </p>
+      <p class="text-justify">
+        What sets RecipeGen apart is our top-chef recipe collection — exclusive recipes crafted by culinary experts worldwide. Unlock access to restaurant-quality dishes right in your home kitchen.
+      </p>
+      <p class="text-justify">
+        Join our growing community of food lovers and make your kitchen a hub of creativity, learning, and delicious flavors.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4">
+    <div class="container">
+      <h5>Contact Us</h5>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
+        <p><i class="fas fa-envelope"></i> Email: info@example.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: 123 Food Lane, Cooktown</p>
+      </div>
+      <p class="mt-3">&copy; 2025 Food Recipe Generator. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Home Page */
+  .hero-image {
+    background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    margin-top: -30px; /* Adjust this value to control the gap if needed */
+    padding-top: 0; /* Ensure no padding above the hero image */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    width: 60%;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  
+  .search-bar input {
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+  }
+  
+  /* Recipe List */
+  .recipe-list {
+    padding: 20px 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+  }
+  
+  .recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners for images */
+  }
+  
+  .recipe-card h5 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .recipe-card button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: small;
+  
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Chef Image */
+  .chef-img {
+    border-radius: 50%; /* Round image */
+    max-width: 100px;   /* Limit the width */
+    max-height: 100px;  /* Limit the height */
+  }
+  .btn{
+    border-radius: 20px;
+    background-color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 10px;
+    background-color:grey;
+    color: white;
+    margin-top: 10px;
+  }
+  .contact-info p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .contact-info i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  
+  /* About Us Section Styling */
+  .about-us-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    min-height: 100vh; /* Ensure section takes full viewport height */
+  }
+  
+  .about-heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .about-subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .about-text strong {
+    color: #ff6b6b;
+  }
+  
+  .about-us-section p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    margin-bottom: 30px;
+    height: 90px;
+  }
+  
+  .navbar-brand {
+    font-size: 40px;
+    color: #333;
+    text-transform: uppercase;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    color: #555;
+    padding-right: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: white;
+    background-color: #555;
+    
+  }
+  
+  .navbar-toggler {
+    border-color:white;
+  }
+  
+  .dropdown-menu {
+    border-radius: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
+  
+  /* About Us Content Box */
+  .content-box {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Restrict maximum width for the content box */
+    text-align: center; /* Center text */
+  }
+  
+  /* About Us Heading */
+  .about-heading {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph Styling */
+  .about-us-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify; /* Justify text for a cleaner look */
+    margin-bottom: 15px;
+  }
+  .custom-navbar {
+    background-color: black; /* Dark Blue */
+  }
+  
+  .custom-navbar .nav-link {
+    color: white !important; /* Ensures the text color is white */
+  }
+  
+  .custom-navbar .navbar-brand {
+    color: white !important; /* Ensures the brand color is white */
+  }
